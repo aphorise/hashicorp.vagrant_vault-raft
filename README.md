@@ -1,5 +1,5 @@
 # HashiCorp `vagrant` demo of **`vault`** HA Cluster using native Raft storage.
-This repo contains a `Vagrantfile` mock of a [Vault](https://www.vaultproject.io/) (HA) High Availability cluster / setup using the Beta feature of [RAFT](https://raft.github.io/) [Storage](https://learn.hashicorp.com/vault/operations/raft-storage) (node: vault2, vault3. etc) as well as [auto-unsealing using Transit Secrets Engine](https://learn.hashicorp.com/vault/operations/autounseal-transit) (node: vault1). The RAFT Storage in Vault is Beta and available since [version 1.3 or later](https://releases.hashicorp.com/vault/).
+This repo contains a `Vagrantfile` mock of a [Vault](https://www.vaultproject.io/) (HA) High Availability cluster / setup using the Beta feature of [RAFT](https://raft.github.io/) [Storage (as detailed on the learn guide)](https://learn.hashicorp.com/vault/operations/raft-storage) with four (4) or more nodes nodes: vault2, vault3. etc as well as [auto-unsealing using Transit Secrets Engine](https://learn.hashicorp.com/vault/operations/autounseal-transit) (node: vault1). The RAFT Storage in Vault is Beta and available since [version 1.3 or later](https://releases.hashicorp.com/vault/).
 
 [![demo](https://asciinema.org/a/304787.svg)](https://asciinema.org/a/304787?autoplay=1)
 
@@ -142,7 +142,9 @@ vault operator raft join IP/FQDN ; # // join raft via active node
 This is intended as a mere practise / training exercise.
 
 See also:
- - [hashicorp/vault-guides/operations/raft-storage](https://github.com/hashicorp/vault-guides/tree/master/operations/raft-storage)
+ - [hashicorp/vault-guides/operations/raft-storage](https://github.com/hashicorp/vault-guides/tree/main/operations/raft-storage)
  - [Vault Consul Storage Example](https://github.com/aphorise/hashicorp.vagrant_vault_consul)
 
+Reference Material:
+ - [Vault HA Cluster with Integrated Storage](https://learn.hashicorp.com/tutorials/vault/raft-storage?in=vault/raft)
 ------
